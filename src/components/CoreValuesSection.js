@@ -44,7 +44,7 @@ const CoreValuesSection = () => {
           <p className="text-[12px] md:text-[16px] text-center font-semibold tracking-wider text-primary-green uppercase">
             Beliefs that Shape Our Culture
           </p>
-          <h2 className="text-[32px] md:text-[38px] lg:text-[43px] text-center font-bold text-primary mb-2  md:mb-4">
+          <h2 className="text-[32px] md:text-[38px] lg:text-[43px] text-center font-bold text-blue mb-2  md:mb-4">
             Our Core Values
           </h2>
           <p className="text-sm md:text-lg text-center text-gray-600 mx-2 md:mx-10">

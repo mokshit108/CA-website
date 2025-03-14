@@ -40,7 +40,7 @@ const HomeHero = () => {
   }, [displayText, currentWordIndex, isDeleting, words]);
 
   return (
-    <div className="relative w-full h-[60vh] md:h-[70vh] overflow-hidden font-['Roboto']">
+    <div className="relative w-full h-[50vh] md:h-[70vh] overflow-hidden font-['Roboto']">
       {/* Background Image with Opacity */}
       <div className="absolute inset-0">
         <img 
@@ -54,9 +54,9 @@ const HomeHero = () => {
       <div className="relative z-10 container mx-auto -mt-12 px-4 h-full flex items-center">
         <div className="w-full md:w-1/2 lg:w-2/5 md:ml-[10px] text-white">
           <div className="bg-gradient-to-r from-green-500/20 to-transparent p-6 rounded-lg">
-            <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-2 sm:mb-4">
+            <h1 className="text-[28px] md:text-3xl lg:text-4xl font-bold mb-2 sm:mb-4">
               <span className="text-white drop-shadow-md">Manage Your</span>{' '}
-              <span className="text-primary inline-block min-h-[1.2em] sm:min-h-[1.5em] min-w-[2em] font-bold drop-shadow-md ">
+              <span className="text-blue inline-block min-h-[1.2em] sm:min-h-[1.5em] min-w-[2em] font-bold drop-shadow-md ">
                 {displayText}
                 <span className="animate-pulse">|</span>
               </span>

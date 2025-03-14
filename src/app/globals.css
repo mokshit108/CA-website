@@ -37,5 +37,9 @@ body {
 }
 
 .text-primary {
+  color: var(--primary-blue);
+}
+
+.text-blue{
   color: var(--text-blue);
 }

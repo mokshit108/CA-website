@@ -43,7 +43,7 @@ const Navbar = () => {
                     height={70}
                     className="mr-3"
                   />
-                  <span className="text-2xl font-bold text-gray-800 font-['Poppins']">Kenil Shah <span className="text-sky-900">&</span> Co</span>
+                  <span className="text-2xl font-bold text-primary-green font-['Poppins']">Kenil Shah <span className="text-sky-900">&</span> Co</span>
                 </div>
               </Link>
             </div>
