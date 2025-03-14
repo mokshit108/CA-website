@@ -3,7 +3,9 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --primary-color: #0047AB;
+  --primary-blue: #0047AB;
+  --primary-green: #63ac4c;
+  --text-blue:#025192;
 }
 
 @theme inline {
@@ -27,5 +29,13 @@ body {
 }
 
 .primary-bg {
-  background-color: var(--primary-color);
+  background-color: var(--primary-blue);
+}
+
+.text-primary-green {
+  color: var(--primary-green);
+}
+
+.text-primary {
+  color: var(--text-blue);
 }

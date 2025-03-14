@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Roboto } from "next/font/google";
 import "./globals.css";
 import { Poppins, Nunito } from 'next/font/google';
 
@@ -15,6 +15,14 @@ const nunito = Nunito({
   weight: ['200', '300', '400', '500', '600', '700', '800', '900', '1000'],
   display: 'swap',
 });
+
+const roboto = Roboto({
+  subsets: ['latin'],
+  variable: '--font-nunito',
+  weight: ['200', '300', '400', '500', '600', '700', '800', '900'],
+  display: 'swap',
+});
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -35,7 +43,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} ${nunito.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} ${nunito.variable} ${roboto.variable} antialiased`}
       >
         {children}
       </body>
