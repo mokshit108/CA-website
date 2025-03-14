@@ -1,11 +1,13 @@
 // components/Navbar.js
 'use client'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -52,13 +54,13 @@ const Navbar = () => {
             <div className="hidden md:flex flex-1 justify-center">
               <div className="flex items-center space-x-10">
                 <Link href="/">
-                  <span className="text-gray-700 hover:text-blue-600 transition duration-200 px-3 py-2 text-base font-medium cursor-pointer border-b-2 border-transparent hover:border-blue-600">Home</span>
+                  <span className={`${pathname === '/' ? 'text-blue-600 border-blue-600' : 'text-gray-700 border-transparent'} hover:text-blue-600 transition duration-200 px-3 py-2 text-base font-medium cursor-pointer border-b-2 hover:border-blue-600`}>Home</span>
                 </Link>
                 <Link href="/about">
-                  <span className="text-gray-700 hover:text-blue-600 transition duration-200 px-3 py-2 text-base font-medium cursor-pointer border-b-2 border-transparent hover:border-blue-600">About</span>
+                  <span className={`${pathname === '/about' ? 'text-blue-600 border-blue-600' : 'text-gray-700 border-transparent'} hover:text-blue-600 transition duration-200 px-3 py-2 text-base font-medium cursor-pointer border-b-2 hover:border-blue-600`}>About</span>
                 </Link>
                 <Link href="/services">
-                  <span className="text-gray-700 hover:text-blue-600 transition duration-200 px-3 py-2 text-base font-medium cursor-pointer border-b-2 border-transparent hover:border-blue-600">Services</span>
+                  <span className={`${pathname === '/services' ? 'text-blue-600 border-blue-600' : 'text-gray-700 border-transparent'} hover:text-blue-600 transition duration-200 px-3 py-2 text-base font-medium cursor-pointer border-b-2 hover:border-blue-600`}>Services</span>
                 </Link>
               </div>
             </div>
@@ -97,13 +99,13 @@ const Navbar = () => {
           <div className="md:hidden border-t border-gray-100">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
               <Link href="/">
-                <span className="block text-gray-700 hover:text-blue-600 hover:bg-gray-50 px-3 py-3 rounded-md text-base font-medium cursor-pointer">Home</span>
+                <span className={`block ${pathname === '/' ? 'text-blue-600' : 'text-gray-700'} hover:text-blue-600 hover:bg-gray-50 px-3 py-3 rounded-md text-base font-medium cursor-pointer`}>Home</span>
               </Link>
               <Link href="/about">
-                <span className="block text-gray-700 hover:text-blue-600 hover:bg-gray-50 px-3 py-3 rounded-md text-base font-medium cursor-pointer">About</span>
+                <span className={`block ${pathname === '/about' ? 'text-blue-600' : 'text-gray-700'} hover:text-blue-600 hover:bg-gray-50 px-3 py-3 rounded-md text-base font-medium cursor-pointer`}>About</span>
               </Link>
               <Link href="/services">
-                <span className="block text-gray-700 hover:text-blue-600 hover:bg-gray-50 px-3 py-3 rounded-md text-base font-medium cursor-pointer">Services</span>
+                <span className={`block ${pathname === '/services' ? 'text-blue-600' : 'text-gray-700'} hover:text-blue-600 hover:bg-gray-50 px-3 py-3 rounded-md text-base font-medium cursor-pointer`}>Services</span>
               </Link>
             </div>
           </div>

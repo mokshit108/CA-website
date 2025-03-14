@@ -38,7 +38,7 @@ const CoreValuesSection = () => {
   ];
 
   return (
-    <section className="py-8 md:py-12 bg-gray-100 px-4 md:px-20 font-['Poppins']">
+    <section className="py-8 px-8 md:py-12 bg-gray-100 md:px-20 font-['Poppins']">
       <div className="container mx-auto">
         <div className="mb-8 md:mb-12">
           <p className="text-[12px] md:text-[16px] text-center font-semibold tracking-wider text-primary-green uppercase">
