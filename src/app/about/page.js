@@ -12,9 +12,19 @@ export default function About() {
     <main>
       <Navbar />
       
+      {/* New Hero Section with Gradient Background */}
+      <section className="py-16 md:py-24 bg-gradient-to-r from-green-600 to-blue-700 text-white">
+        <div className="container mx-auto px-6 md:px-20">
+          <h1 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6">About Us</h1>
+          <p className="text-lg md:text-xl max-w-2xl">
+            Learn about our journey, our mission, and why we're the trusted financial partner for businesses across India.
+          </p>
+        </div>
+      </section>
+      
       <div className="px-8 py-8 md:py-12 font-['Poppins'] flex justify-center">
         <div className="max-w-4xl">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl text-center font-bold text-blue mb-6 uppercase">About</h1>
+          {/* <h1 className="text-2xl sm:text-3xl md:text-4xl text-center font-bold text-blue mb-6 uppercase">About</h1> */}
           
           <div className="flex flex-col md:flex-row gap-6 md:gap-8 mb-10 md:mb-12">
             <div>
@@ -61,22 +71,22 @@ export default function About() {
           <div>
             <h2 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-3 md:mb-4">Why Choose Us</h2>
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-6">
-              <div className="bg-white rounded-lg shadow-sm p-4 sm:p-6 border border-gray-100">
-                <h3 className="text-base sm:text-lg font-semibold text-gray-700 mb-2 md:mb-4">Specialized Expertise</h3>
+              <div className="bg-white rounded-lg shadow-sm p-4 sm:p-6 border border-gray-100 hover:border-green-500 transition-all">
+                <h3 className="text-base sm:text-lg font-semibold text-blue-700 mb-2 md:mb-4">Specialized Expertise</h3>
                 <p className="text-sm sm:text-base text-gray-600">
                   We offer deep domain knowledge across multiple taxation areas, including international taxation, transfer pricing, and GST advisory.
                 </p>
               </div>
               
-              <div className="bg-white rounded-lg shadow-sm p-4 sm:p-6 border border-gray-100">
-                <h3 className="text-base sm:text-lg font-semibold text-gray-700 mb-2 md:mb-4">Comprehensive Solutions</h3>
+              <div className="bg-white rounded-lg shadow-sm p-4 sm:p-6 border border-gray-100 hover:border-green-500 transition-all">
+                <h3 className="text-base sm:text-lg font-semibold text-blue-700 mb-2 md:mb-4">Comprehensive Solutions</h3>
                 <p className="text-sm sm:text-base text-gray-600">
                   From audit and compliance to strategic tax planning and complex advisory, we provide end-to-end financial services under one roof.
                 </p>
               </div>
               
-              <div className="bg-white rounded-lg shadow-sm p-4 sm:p-6 border border-gray-100">
-                <h3 className="text-base sm:text-lg font-semibold text-gray-700 mb-2 md:mb-4">Client-Centric Approach</h3>
+              <div className="bg-white rounded-lg shadow-sm p-4 sm:p-6 border border-gray-100 hover:border-green-500 transition-all">
+                <h3 className="text-base sm:text-lg font-semibold text-blue-700 mb-2 md:mb-4">Client-Centric Approach</h3>
                 <p className="text-sm sm:text-base text-gray-600">
                   We understand that each client has unique needs and challenges, which is why we develop customized solutions rather than generic advice.
                 </p>
