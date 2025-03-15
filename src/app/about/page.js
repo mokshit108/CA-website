@@ -17,7 +17,7 @@ export default function About() {
         <div className="container mx-auto px-4 sm:px-6 md:px-10 lg:px-20">
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 md:mb-6">About Us</h1>
           <p className="text-base sm:text-lg md:text-xl max-w-2xl leading-relaxed">
-            Learn about our journey, our mission, and why we're the trusted financial partner for businesses across India.
+            Learn about our journey, our mission, and why we’re the trusted financial partner for businesses across India.
           </p>
         </div>
       </section>
