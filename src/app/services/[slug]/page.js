@@ -22,7 +22,7 @@ export default function ServiceDetailPage({ params }) {
       <div className="min-h-screen flex items-center justify-center font-['Poppins']">
         <div className="text-center">
           <h1 className="text-3xl font-bold text-gray-800 mb-4">Service Not Found</h1>
-          <p className="text-gray-600 mb-6">The service you're looking for doesn't exist.</p>
+          <p className="text-gray-600 mb-6">The service you’re looking for doesn’t exist.</p>
           <Link href="/services" className="flex items-center gap-2">
             <FontAwesomeIcon icon={faArrowLeft} className='w-12 h-12' /> Back to All Services
           </Link>

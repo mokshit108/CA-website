@@ -1,5 +1,6 @@
 'use client'
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 const HomeHero = () => {
   const [displayText, setDisplayText] = useState('');
@@ -43,7 +44,9 @@ const HomeHero = () => {
     <div className="relative w-full h-[50vh] md:h-[70vh] overflow-hidden font-['Roboto']">
       {/* Background Image with Opacity */}
       <div className="absolute inset-0">
-        <img 
+        <Image 
+          width={100}
+          height={100}
           src="/images/bg-home.jpg"
           alt="CA Firm Background"
           className="w-full h-full object-cover opacity-70"
