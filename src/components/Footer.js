@@ -1,4 +1,3 @@
-// src/components/Footer.js
 'use client'
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
@@ -15,12 +14,13 @@ export default function Footer() {
     return (
         <footer className="bg-gradient-to-b from-sky-950 via-sky-900 to-emerald-700 text-white pt-8 pb-4 sm:pt-10 sm:pb-4 font-['Poppins']">
             <div className="container mx-auto px-4 sm:px-6 md:px-10 lg:px-20">
-                <div 
-                    className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-                    style={{ transitionDelay: '200ms' }}
-                >
+                {/* Main footer content */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
                     {/* About Column */}
-                    <div>
+                    <div 
+                        className={`transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+                        style={{ transitionDelay: '200ms' }}
+                    >
                         <h3 className="text-lg md:text-xl font-bold mb-1 md:mb-4 text-white">ABOUT</h3>
                         <p className="text-sm md:text-base text-white mb-2 md:mb-4 leading-relaxed">
                             Kenil Shah & Co is a progressive chartered accountancy firm based in Mumbai, delivering comprehensive financial services to businesses and individuals across India.
@@ -28,7 +28,10 @@ export default function Footer() {
                     </div>
 
                     {/* Contact Info Column */}
-                    <div>
+                    <div 
+                        className={`transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+                        style={{ transitionDelay: '400ms' }}
+                    >
                         <h3 className="text-lg md:text-xl font-bold mb-1 md:mb-4 text-white">CONTACT INFO</h3>
                         <p className="text-sm md:text-base text-white mb-3 leading-relaxed">
                             Nandkore Palace<br />
@@ -54,57 +57,65 @@ export default function Footer() {
                         </p>
                     </div>
 
-                    {/* Explore Column */}
-                    <div>
-                        <h3 className="text-lg md:text-xl font-bold mb-1 max-md:mt-2 md:mb-4 text-white">EXPLORE</h3>
-                        <ul className="space-y-1 sm:space-y-2">
-                            {['Home', 'About', 'Services', 'Contact'].map((item, index) => (
-                                <li 
-                                    key={index}
-                                    className={`transition-all duration-500 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'}`}
-                                    style={{ transitionDelay: `${300 + (index * 100)}ms` }}
-                                >
-                                    <Link 
-                                        href={item === 'Home' ? '/' : `/${item.toLowerCase().replace(' ', '-')}`}
-                                        className="text-sm md:text-base text-white hover:text-blue-200 transition-colors"
-                                    >
-                                        {item}
-                                    </Link>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
+                    {/* Explore and Services in one row on mobile */}
+                    <div 
+                        className={`col-span-1 md:col-span-2 lg:col-span-2 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+                        style={{ transitionDelay: '600ms' }}
+                    >
+                        <div className="grid grid-cols-2 gap-4">
+                            {/* Explore Column */}
+                            <div>
+                                <h3 className="text-lg md:text-xl font-bold mb-1 md:mb-4 text-white">EXPLORE</h3>
+                                <ul className="space-y-1 sm:space-y-2">
+                                    {['Home', 'About', 'Services', 'Contact'].map((item, index) => (
+                                        <li 
+                                            key={index}
+                                            className={`transition-all duration-500 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'}`}
+                                            style={{ transitionDelay: `${700 + (index * 100)}ms` }}
+                                        >
+                                            <Link 
+                                                href={item === 'Home' ? '/' : `/${item.toLowerCase().replace(' ', '-')}`}
+                                                className="text-sm md:text-base text-white hover:text-blue-200 transition-colors"
+                                            >
+                                                {item}
+                                            </Link>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
 
-                    {/* Services Column */}
-                    <div>
-                        <h3 className="text-lg md:text-xl font-bold mb-1 md:mb-4 text-white">SERVICES</h3>
-                        <ul className="space-y-1 sm:space-y-2">
-                            {[
-                                { href: "/services/auditing-assurance", text: "Auditing & Assurance" },
-                                { href: "/services/tax-planning-advisory", text: "Tax Planning & Advisory" },
-                                { href: "/services/international-taxation", text: "International Taxation & Transfer Pricing" },
-                                { href: "/services/direct-tax-nri", text: "Direct Tax & NRI Taxation" },
-                                { href: "/services/gst-advisory", text: "GST Advisory" },
-                                { href: "/services/accounting-bookkeeping", text: "Accounting & Bookkeeping" }
-                            ].map((item, index) => (
-                                <li 
-                                    key={index}
-                                    className={`transition-all duration-500 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'}`}
-                                    style={{ transitionDelay: `${700 + (index * 100)}ms` }}
-                                >
-                                    <Link href={item.href} className="text-sm md:text-base text-white hover:text-blue-200 transition-colors">
-                                        {item.text}
-                                    </Link>
-                                </li>
-                            ))}
-                        </ul>
+                            {/* Services Column */}
+                            <div>
+                                <h3 className="text-lg md:text-xl font-bold mb-1 md:mb-4 text-white">SERVICES</h3>
+                                <ul className="space-y-1 sm:space-y-2">
+                                    {[
+                                        { href: "/services/auditing-assurance", text: "Auditing & Assurance" },
+                                        { href: "/services/tax-planning-advisory", text: "Tax Planning & Advisory" },
+                                        { href: "/services/international-taxation", text: "International Taxation & Transfer Pricing" },
+                                        { href: "/services/direct-tax-nri", text: "Direct Tax & NRI Taxation" },
+                                        { href: "/services/gst-advisory", text: "GST Advisory" },
+                                        { href: "/services/accounting-bookkeeping", text: "Accounting & Bookkeeping" }
+                                    ].map((item, index) => (
+                                        <li 
+                                            key={index}
+                                            className={`transition-all duration-500 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'}`}
+                                            style={{ transitionDelay: `${1100 + (index * 100)}ms` }}
+                                        >
+                                            <Link href={item.href} className="text-sm md:text-base text-white hover:text-blue-200 transition-colors">
+                                                {item.text}
+                                            </Link>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
                 {/* Bottom Copyright */}
                 <div 
                     className={`border-t border-blue-500 mt-6 md:mt-10 pt-4 transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}
-                    style={{ transitionDelay: '1300ms' }}
+                    style={{ transitionDelay: '1700ms' }}
                 >
                     <div className="flex flex-col sm:flex-row justify-between items-center">
                         <p className="text-sm sm:text-base text-white mb-2 sm:mb-0">
