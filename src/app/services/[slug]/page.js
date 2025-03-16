@@ -45,7 +45,7 @@ export default function ServiceDetailPage({ params }) {
           
           <div className="flex items-center mb-4">
             <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full bg-white flex items-center justify-center text-green-600 mr-3 sm:mr-4">
-              <FontAwesomeIcon icon={service.icon} className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7" />
+              <FontAwesomeIcon icon={service.icon} className="w-4 h-4 md:w-8 md:h-8" />
             </div>
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">{service.title}</h1>
           </div>

@@ -11,6 +11,15 @@ export default function Contact() {
     subject: '',
     message: ''
   });
+  
+  const [errors, setErrors] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    subject: '',
+    message: ''
+  });
+  
   const [submitStatus, setSubmitStatus] = useState(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -29,20 +38,107 @@ export default function Contact() {
     };
   }, [submitStatus]);
 
+  const validateField = (name, value) => {
+    let errorMessage = '';
+    
+    switch(name) {
+      case 'name':
+        // Only letters and spaces allowed
+        if (!value) {
+          errorMessage = 'Name is required';
+        } else if (!/^[A-Za-z\s]+$/.test(value)) {
+          errorMessage = 'Name should contain only letters and spaces';
+        }
+        break;
+        
+      case 'email':
+        // Email format validation
+        if (!value) {
+          errorMessage = 'Email is required';
+        } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
+          errorMessage = 'Please enter a valid email address';
+        }
+        break;
+        
+      case 'phone':
+        // Only 10 digits allowed
+        if (!value) {
+          errorMessage = 'Phone number is required';
+        } else if (!/^\d{10}$/.test(value)) {
+          errorMessage = 'Phone number must be exactly 10 digits';
+        }
+        break;
+        
+      case 'subject':
+        // No special characters allowed
+        if (!value) {
+          errorMessage = 'Subject is required';
+        } else if (!/^[A-Za-z0-9\s]+$/.test(value)) {
+          errorMessage = 'Special characters are not allowed in subject';
+        }
+        break;
+        
+      case 'message':
+        // At least 3 words required
+        if (!value) {
+          errorMessage = 'Message is required';
+        } else {
+          const wordCount = value.trim().split(/\s+/).length;
+          if (wordCount < 3) {
+            errorMessage = 'Message must contain at least 3 words';
+          }
+        }
+        break;
+        
+      default:
+        break;
+    }
+    
+    return errorMessage;
+  };
+
   const handleChange = (e) => {
+    const { name, value } = e.target;
+    
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [name]: value
     });
+    
+    // Validate field on change
+    const errorMessage = validateField(name, value);
+    setErrors({
+      ...errors,
+      [name]: errorMessage
+    });
+  };
+
+  const validateForm = () => {
+    let isValid = true;
+    const newErrors = {};
+    
+    // Validate all fields
+    Object.keys(formData).forEach(key => {
+      const errorMessage = validateField(key, formData[key]);
+      newErrors[key] = errorMessage;
+      
+      if (errorMessage) {
+        isValid = false;
+      }
+    });
+    
+    setErrors(newErrors);
+    return isValid;
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     
-    if (!formData.name || !formData.email || !formData.phone || !formData.subject || !formData.message) {
+    // Validate all fields before submission
+    if (!validateForm()) {
       setSubmitStatus({
         success: false,
-        message: 'Please fill all required fields.'
+        message: 'Please fix the errors in the form before submitting.'
       });
       return;
     }
@@ -137,8 +233,8 @@ export default function Contact() {
                   <div>
                     <h3 className="text-base sm:text-lg font-semibold text-blue-700 mb-2">Office Hours</h3>
                     <p className="text-gray-600 leading-relaxed">
-                      Monday - Friday: 10:00 AM - 7:00 PM<br />
-                      Saturday: 10:00 AM - 3:00 PM<br />
+                      Monday - Friday: 9:00 AM - 5:00 PM<br />
+                      Saturday: 11:00 AM - 4:00 PM<br />
                       Sunday: Closed
                     </p>
                   </div>
@@ -169,7 +265,7 @@ export default function Contact() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                        Full Name*
+                        Full Name <span className="text-red-500">*</span>
                       </label>
                       <input
                         type="text"
@@ -177,15 +273,15 @@ export default function Contact() {
                         name="name"
                         value={formData.name}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all"
+                        className={`w-full px-4 py-3 rounded-md border ${errors.name ? 'border-red-500' : 'border-gray-300'} focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all`}
                         placeholder="Enter your full name"
-                        required
                       />
+                      {errors.name && <p className="mt-1 text-sm text-red-500">{errors.name}</p>}
                     </div>
                     
                     <div>
                       <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                        Email Address*
+                        Email Address <span className="text-red-500">*</span>
                       </label>
                       <input
                         type="email"
@@ -193,16 +289,16 @@ export default function Contact() {
                         name="email"
                         value={formData.email}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all"
+                        className={`w-full px-4 py-3 rounded-md border ${errors.email ? 'border-red-500' : 'border-gray-300'} focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all`}
                         placeholder="Enter your email address"
-                        required
                       />
+                      {errors.email && <p className="mt-1 text-sm text-red-500">{errors.email}</p>}
                     </div>
                   </div>
                   
                   <div>
                     <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                      Phone Number*
+                      Phone Number <span className="text-red-500">*</span>
                     </label>
                     <input
                       type="tel"
@@ -210,15 +306,15 @@ export default function Contact() {
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all"
-                      placeholder="Enter your phone number"
-                      required
+                      className={`w-full px-4 py-3 rounded-md border ${errors.phone ? 'border-red-500' : 'border-gray-300'} focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all`}
+                      placeholder="Enter your 10-digit phone number"
                     />
+                    {errors.phone && <p className="mt-1 text-sm text-red-500">{errors.phone}</p>}
                   </div>
                   
                   <div>
                     <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
-                      Subject*
+                      Subject <span className="text-red-500">*</span>
                     </label>
                     <input
                       type="text"
@@ -226,15 +322,15 @@ export default function Contact() {
                       name="subject"
                       value={formData.subject}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all"
+                      className={`w-full px-4 py-3 rounded-md border ${errors.subject ? 'border-red-500' : 'border-gray-300'} focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all`}
                       placeholder="Enter the subject"
-                      required
                     />
+                    {errors.subject && <p className="mt-1 text-sm text-red-500">{errors.subject}</p>}
                   </div>
                   
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                      Message*
+                      Message <span className="text-red-500">*</span>
                     </label>
                     <textarea
                       id="message"
@@ -242,10 +338,10 @@ export default function Contact() {
                       rows="5"
                       value={formData.message}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all"
-                      placeholder="Enter your message"
-                      required
+                      className={`w-full px-4 py-3 rounded-md border ${errors.message ? 'border-red-500' : 'border-gray-300'} focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all`}
+                      placeholder="Enter your message (minimum 3 words)"
                     ></textarea>
+                    {errors.message && <p className="mt-1 text-sm text-red-500">{errors.message}</p>}
                   </div>
                   
                   <div>
