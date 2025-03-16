@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import HomeHero from "@/components/HomeHero";
 import CoreValuesSection from "@/components/CoreValuesSection";
 import ServiceCard from "@/components/ServiceCard";
+import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <>
@@ -9,6 +10,7 @@ export default function Home() {
      <HomeHero/>
     <CoreValuesSection/>
     <ServiceCard/>
+    <Footer/>
     </>
   );
 }

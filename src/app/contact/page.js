@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from 'react';
 import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -104,7 +105,7 @@ export default function Contact() {
       <Navbar />
       
       {/* Hero Section with Gradient Background */}
-      <section className="py-10 sm:py-10 md:py-12 bg-gradient-to-r from-green-600 to-blue-700 text-white">
+      <section className="py-10 sm:py-10 md:py-12 bg-gradient-to-r from-green-600 via-emerald-600 to-blue-700 text-white">
         <div className="container mx-auto px-4 sm:px-6 md:px-10 lg:px-20">
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 md:mb-6">Contact Us</h1>
           <p className="text-base sm:text-lg md:text-xl max-w-2xl leading-relaxed">
@@ -280,6 +281,7 @@ export default function Contact() {
       </div>
       
       {/* Footer would go here */}
+      <Footer/>
     </main>
   );
 }

@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { servicesData } from '@/app/data/services';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 
 // This function is required for static generation of dynamic routes
 export function generateStaticParams() {
@@ -35,7 +36,7 @@ export default function ServiceDetailPage({ params }) {
     <div className="font-['Poppins']">
       <Navbar/>
       {/* Hero Section */}
-      <section className="py-8 sm:py-10 md:py-12 bg-gradient-to-r from-green-600 to-blue-700 text-white">
+      <section className="py-8 sm:py-10 md:py-12 bg-gradient-to-r from-green-600 via-emerald-600 to-blue-700 text-white">
         <div className="container mx-auto px-4 sm:px-6 md:px-10 lg:px-20">
           <Link href="/services" className="inline-flex items-center mb-6 sm:mb-10 md:mb-12 text-white text-base sm:text-lg hover:underline">
             <FontAwesomeIcon icon={faArrowLeft} className="mr-2 sm:mr-3 w-4 h-4 sm:w-5 sm:h-5" />
@@ -79,6 +80,8 @@ export default function ServiceDetailPage({ params }) {
           </div>
         </div>
       </section>
+
+      <Footer/>
     </div>
   );
 }
