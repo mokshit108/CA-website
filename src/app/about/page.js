@@ -65,7 +65,7 @@ export default function About() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.6 }}
           >
-            Learn about our journey, our mission, and why we're the trusted financial partner for businesses across India.
+            Learn about our journey, our mission, and why we’re the trusted financial partner for businesses across India.
           </motion.p>
         </div>
       </motion.section>
