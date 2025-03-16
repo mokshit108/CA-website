@@ -75,7 +75,7 @@ const HomeHero = () => {
                 <div className="relative group">
                   <div className="absolute -inset-1 bg-gradient-to-r from-green-700/60 to- rounded-lg blur-sm opacity-75 group-hover:opacity-100 transition duration-300 group-hover:duration-200"></div>
                   <button className="relative bg-white text-gray-900 font-bold text-xs sm:text-sm md:text-base py-2 sm:py-2.5 md:py-3 px-4 sm:px-5 md:px-6 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center group overflow-hidden group-hover:green-700">
-                    <span className="relative z-10">Let's Talk</span>
+                    <span className="relative z-10">Let’s Talk</span>
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 sm:h-4.5 sm:w-4.5 md:h-5 md:w-5 ml-1 sm:ml-1.5 md:ml-2 transition-transform duration-300 transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                     </svg>
