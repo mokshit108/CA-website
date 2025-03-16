@@ -81,7 +81,7 @@ const HomeHero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.9 }}
             >
-              Empowering Excellence Every Step of the Way
+              Empowering Excellence, Every Step of the Way
             </motion.p>
             <motion.div 
               className="mt-4 sm:mt-5 md:mt-6"
