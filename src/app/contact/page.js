@@ -274,25 +274,25 @@ export default function Contact() {
                 transition={{ duration: 0.3 }}
               >
                 <motion.h2 
-                  className="text-xl sm:text-2xl font-semibold gradient-text mb-4 md:mb-6"
+                  className="text-xl sm:text-2xl font-semibold gradient-text mb-3 md:mb-6"
                   variants={fadeIn}
                 >
                   Our Office
                 </motion.h2>
                 
                 <motion.div 
-                  className="space-y-12"
+                  className="space-y-6 md:space-y-8"
                   variants={staggerContainer}
                 >
                   <motion.div variants={fadeIn}>
-                    <h3 className="text-base md:text-lg font-semibold gradient-text mb-2 mt-4">Address</h3>
+                    <h3 className="text-base md:text-lg font-semibold gradient-text mb-1  md:mb-2 mt-2 md:mt-4">Address</h3>
                     <p className="text-gray-600 leading-relaxed">
                       Nandkore Palace Manchubhai Rd, Malad East, Mumbai - 400097
                     </p>
                   </motion.div>
                   
                   <motion.div variants={fadeIn}>
-                    <h3 className="text-base md:text-lg font-semibold gradient-text mb-2">Office Hours</h3>
+                    <h3 className="text-base md:text-lg font-semibold gradient-text mb-1  md:mb-2">Office Hours</h3>
                     <p className="text-gray-600 leading-relaxed">
                       <span className='font-semibold mr-2'>Monday - Friday</span>- 9:00 AM - 5:00 PM<br />
                       <span className='font-semibold mr-2'>Saturday</span>- 11:00 AM - 4:00 PM<br />
@@ -301,7 +301,7 @@ export default function Contact() {
                   </motion.div>
                   
                   <motion.div variants={fadeIn}>
-                    <h3 className="text-base md:text-lg font-semibold gradient-text mb-2">Contact Info</h3>
+                    <h3 className="text-base md:text-lg font-semibold gradient-text mb-1  md:mb-2">Contact Info</h3>
                     <p className="text-gray-600 leading-relaxed">
                       Phone: +91 9167699919<br />
                       Email: kenilshah059@gmail.com
