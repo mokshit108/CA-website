@@ -38,7 +38,7 @@ export default function ServiceDetailPage({ params }) {
       {/* Hero Section */}
       <section className="py-8 sm:py-10 md:py-12 bg-gradient-to-r from-green-600 via-emerald-600 to-blue-700 text-white">
         <div className="container mx-auto px-4 sm:px-6 md:px-10 lg:px-20">
-          <Link href="/services" className="inline-flex items-center mb-6 sm:mb-10 md:mb-12 text-white text-base sm:text-lg hover:underline">
+          <Link href="/services" className="inline-flex items-center mb-6 sm:mb-10 md:mb-12 text-white text-base md:text-lg hover:underline">
             <FontAwesomeIcon icon={faArrowLeft} className="mr-2 sm:mr-3 w-4 h-4 sm:w-5 sm:h-5" />
             Back to All Services
           </Link>
@@ -47,10 +47,10 @@ export default function ServiceDetailPage({ params }) {
             <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full bg-white flex items-center justify-center text-green-600 mr-3 sm:mr-4">
               <FontAwesomeIcon icon={service.icon} className="w-4 h-4 md:w-8 md:h-8" />
             </div>
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">{service.title}</h1>
+            <h1 className="text-2xl md:text-4xl font-bold">{service.title}</h1>
           </div>
           
-          <p className="text-base sm:text-lg md:text-xl max-w-2xl">
+          <p className="text-base md:text-xl max-w-2xl">
             {service.description}
           </p>
         </div>

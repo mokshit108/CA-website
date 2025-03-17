@@ -92,19 +92,19 @@ const CoreValuesSection = () => {
           variants={titleVariants}
         >
           <motion.p 
-            className="text-xs sm:text-sm md:text-base text-center font-semibold tracking-wider text-primary-green uppercase"
+            className="text-xs md:text-sm lg:text-base text-center font-semibold tracking-wider text-primary-green uppercase"
             variants={titleVariants}
           >
             Beliefs that Shape Our Culture
           </motion.p>
           <motion.h2 
-            className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-center font-bold text-blue mb-2 sm:mb-3 md:mb-4"
+            className="text-2xl md:text-3xl lg:text-4xl text-center font-bold text-blue mb-2 sm:mb-3 md:mb-4"
             variants={titleVariants}
           >
             Our Core Values
           </motion.h2>
           <motion.p 
-            className="text-xs sm:text-sm md:text-base lg:text-lg text-center text-gray-600 mx-1 sm:mx-2 md:mx-6 lg:mx-10 leading-relaxed"
+            className="text-sm md:text-base lg:text-lg text-center text-gray-600 mx-1 sm:mx-2 md:mx-6 lg:mx-10 leading-relaxed"
             variants={titleVariants}
           >
             Our firm believe and follow the culture to maintain faith, integrity and ethics in all levels during deliver services to every client. Our profession is our faith and our people always pursue this journey.

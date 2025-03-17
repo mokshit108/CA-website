@@ -117,7 +117,7 @@ const ServicesSection = () => {
             Our Services
           </motion.h2>
           <motion.p 
-            className="text-xs md:text-sm lg:text-base text-center text-gray-600 mx-2 md:mx-10"
+            className="text-sm md:text-base lg:text-lg text-center text-gray-600 mx-2 md:mx-10"
             variants={headerVariants}
           >
             We offer comprehensive financial solutions tailored to meet your unique business needs with expertise and precision.

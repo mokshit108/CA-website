@@ -285,7 +285,7 @@ export default function Contact() {
                   variants={staggerContainer}
                 >
                   <motion.div variants={fadeIn}>
-                    <h3 className="text-base sm:text-lg font-semibold text-blue-700 mb-2">Address</h3>
+                    <h3 className="text-base md:text-lg font-semibold text-blue-700 mb-2">Address</h3>
                     <p className="text-gray-600 leading-relaxed">
                       NANDKORE PALACE<br />
                       MANCHHUBHAI ROAD<br />
@@ -295,7 +295,7 @@ export default function Contact() {
                   </motion.div>
                   
                   <motion.div variants={fadeIn}>
-                    <h3 className="text-base sm:text-lg font-semibold text-blue-700 mb-2">Office Hours</h3>
+                    <h3 className="text-base md:text-lg font-semibold text-blue-700 mb-2">Office Hours</h3>
                     <p className="text-gray-600 leading-relaxed">
                       Monday - Friday: 9:00 AM - 5:00 PM<br />
                       Saturday: 11:00 AM - 4:00 PM<br />
@@ -304,7 +304,7 @@ export default function Contact() {
                   </motion.div>
                   
                   <motion.div variants={fadeIn}>
-                    <h3 className="text-base sm:text-lg font-semibold text-blue-700 mb-2">Contact Info</h3>
+                    <h3 className="text-base md:text-lg font-semibold text-blue-700 mb-2">Contact Info</h3>
                     <p className="text-gray-600 leading-relaxed">
                       Phone: +91 9167699919<br />
                       Email: kenilshah059@gmail.com

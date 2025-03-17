@@ -49,7 +49,7 @@ const HomeHero = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.5 }}
           >
-            <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold">
+            <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold">
               <motion.span 
                 className="text-white drop-shadow-md"
                 initial={{ opacity: 0, y: 20 }}
