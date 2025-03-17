@@ -169,7 +169,7 @@ const ServicesPage = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
-          className="py-8 sm:py-8 md:py-12 bg-gradient-to-r from-green-600 via-emerald-600 to-blue-700 text-white"
+          className="py-8 sm:py-8 md:py-12 bg-gradient-to-r from-sky-950 via-sky-900 to-emerald-700 text-white"
         >
           <div className="container mx-auto px-4 sm:px-6 md:px-10 lg:px-20">
             <motion.h1 
@@ -254,7 +254,7 @@ const ServicesPage = () => {
                         {service.icon}
                       </motion.div>
                       <div>
-                        <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-gray-800 leading-tight">{service.title}</h3>
+                        <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold gradient-text leading-tight">{service.title}</h3>
                         <p className="text-xs sm:text-sm md:text-base text-gray-600 mt-1 hidden sm:block">{service.description}</p>
                       </div>
                     </div>
@@ -340,7 +340,7 @@ const ServicesPage = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800 mb-3 sm:mb-4"
+              className="text-xl sm:text-2xl md:text-3xl font-bold gradient-text mb-3 sm:mb-4"
             >
               Need Tailored Financial Solutions?
             </motion.h2>

@@ -148,7 +148,7 @@ const ServicesSection = () => {
                 </motion.div>
               </div>
               <motion.h3 
-                className="text-sm md:text-base lg:text-lg font-semibold text-gray-900 mb-2 md:mb-3 group-hover:text-green-700 transition-colors duration-300 text-start"
+                className="text-sm md:text-base lg:text-lg font-semibold gradient-text mb-2 md:mb-3 group-hover:text-green-700 transition-colors duration-300 text-start"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.2 }}

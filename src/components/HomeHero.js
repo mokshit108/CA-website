@@ -44,7 +44,7 @@ const HomeHero = () => {
           transition={{ duration: 0.8, delay: 0.3 }}
         >
           <motion.div 
-            className="bg-gradient-to-r from-sky-800 via-emerald-600 to-transparent p-5 md:p-7 rounded-lg"
+            className="bg-gradient-to-r from-sky-900 via-emerald-700 to-transparent p-5 md:p-7 rounded-lg"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.5 }}

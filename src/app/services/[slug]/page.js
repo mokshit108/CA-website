@@ -36,7 +36,7 @@ export default function ServiceDetailPage({ params }) {
     <div className="font-['Poppins']">
       <Navbar/>
       {/* Hero Section */}
-      <section className="py-8 sm:py-10 md:py-12 bg-gradient-to-r from-green-600 via-emerald-600 to-blue-700 text-white">
+      <section className="py-8 sm:py-10 md:py-12 bg-gradient-to-r from-sky-950 via-sky-900 to-emerald-700 text-white">
         <div className="container mx-auto px-4 sm:px-6 md:px-10 lg:px-20">
           <Link href="/services" className="inline-flex items-center mb-6 sm:mb-10 md:mb-12 text-white text-base md:text-lg hover:underline">
             <FontAwesomeIcon icon={faArrowLeft} className="mr-2 sm:mr-3 w-4 h-4 sm:w-5 sm:h-5" />
@@ -69,7 +69,7 @@ export default function ServiceDetailPage({ params }) {
                     <div className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 rounded-full bg-green-600 flex items-center justify-center text-white mr-2 sm:mr-3">
                       <span className="text-xs sm:text-sm font-bold">{index + 1}</span>
                     </div>
-                    <span className="leading-tight">{offering}</span>
+                    <span className="leading-tight gradient-text">{offering}</span>
                   </h3>
                   <p className="text-sm sm:text-base text-gray-600 pl-8 sm:pl-10 md:pl-11 leading-relaxed">
                     We provide comprehensive {offering.toLowerCase()} services tailored to meet your specific business requirements.

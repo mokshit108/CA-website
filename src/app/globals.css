@@ -43,3 +43,11 @@ body {
 .text-blue{
   color: var(--text-blue);
 }
+
+.gradient-text {
+  background: linear-gradient(90deg, #0060a0, #0c4a6e, #065f46);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}

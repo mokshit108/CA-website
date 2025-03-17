@@ -45,7 +45,7 @@ export default function About() {
       
       {/* Hero Section with Gradient Background */}
       <motion.section 
-        className="py-10 sm:py-10 md:py-12 bg-gradient-to-r from-green-600 via-emerald-600 to-blue-700 text-white"
+        className="py-10 sm:py-10 md:py-12 bg-gradient-to-r from-sky-950 via-sky-900 to-emerald-700 text-white"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
@@ -85,7 +85,7 @@ export default function About() {
           >
             <div>
               <motion.h2 
-                className="text-lg sm:text-xl md:text-2xl font-semibold text-gray-800 mb-2 sm:mb-3 md:mb-4"
+                className="text-lg sm:text-xl md:text-2xl font-semibold gradient-text mb-2 sm:mb-3 md:mb-4"
                 variants={fadeIn}
               >
                 Our Firm
@@ -110,7 +110,7 @@ export default function About() {
             variants={fadeIn}
           >
             <motion.h2 
-              className="text-lg sm:text-xl md:text-2xl font-semibold text-gray-800 mb-2 sm:mb-3 md:mb-4"
+              className="text-lg sm:text-xl md:text-2xl font-semibold gradient-text mb-2 sm:mb-3 md:mb-4"
               variants={fadeIn}
             >
               Our Mission
@@ -128,7 +128,7 @@ export default function About() {
             variants={fadeIn}
           >
             <motion.h2 
-              className="text-lg sm:text-xl md:text-2xl font-semibold text-gray-800 mb-2 sm:mb-3 md:mb-4 text-center"
+              className="text-lg sm:text-xl md:text-2xl font-semibold gradient-text mb-2 sm:mb-3 md:mb-4 text-center"
               variants={fadeIn}
             >
               Meet Our Founder
@@ -185,7 +185,7 @@ export default function About() {
             variants={fadeIn}
           >
             <motion.h2 
-              className="text-lg sm:text-xl md:text-2xl font-semibold text-gray-800 mb-3 sm:mb-4 md:mb-5"
+              className="text-lg sm:text-xl md:text-2xl font-semibold gradient-text mb-3 sm:mb-4 md:mb-5"
               variants={fadeIn}
             >
               Why Choose Us
@@ -203,7 +203,7 @@ export default function About() {
                 whileTap={{ scale: 0.98 }}
               >
                 <motion.h3 
-                  className="text-base sm:text-lg font-semibold text-blue-700 mb-2 sm:mb-3 md:mb-4"
+                  className="text-base sm:text-lg font-semibold gradient-text mb-2 sm:mb-3 md:mb-4"
                   variants={fadeIn}
                 >
                   Specialized Expertise
@@ -225,7 +225,7 @@ export default function About() {
                 whileTap={{ scale: 0.98 }}
               >
                 <motion.h3 
-                  className="text-base sm:text-lg font-semibold text-blue-700 mb-2 sm:mb-3 md:mb-4"
+                  className="text-base sm:text-lg font-semibold gradient-text mb-2 sm:mb-3 md:mb-4"
                   variants={fadeIn}
                 >
                   Comprehensive Solutions
@@ -247,7 +247,7 @@ export default function About() {
                 whileTap={{ scale: 0.98 }}
               >
                 <motion.h3 
-                  className="text-base sm:text-lg font-semibold text-blue-700 mb-2 sm:mb-3 md:mb-4"
+                  className="text-base sm:text-lg font-semibold gradient-text mb-2 sm:mb-3 md:mb-4"
                   variants={fadeIn}
                 >
                   Client-Centric Approach

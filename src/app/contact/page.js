@@ -224,7 +224,7 @@ export default function Contact() {
       
       {/* Hero Section with Gradient Background */}
       <motion.section 
-        className="py-10 sm:py-10 md:py-12 bg-gradient-to-r from-green-600 via-emerald-600 to-blue-700 text-white"
+        className="py-10 sm:py-10 md:py-12 bg-gradient-to-r from-sky-950 via-sky-900 to-emerald-700 text-white"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
@@ -274,37 +274,34 @@ export default function Contact() {
                 transition={{ duration: 0.3 }}
               >
                 <motion.h2 
-                  className="text-xl sm:text-2xl font-semibold text-gray-800 mb-4 md:mb-6"
+                  className="text-xl sm:text-2xl font-semibold gradient-text mb-4 md:mb-6"
                   variants={fadeIn}
                 >
                   Our Office
                 </motion.h2>
                 
                 <motion.div 
-                  className="space-y-6"
+                  className="space-y-12"
                   variants={staggerContainer}
                 >
                   <motion.div variants={fadeIn}>
-                    <h3 className="text-base md:text-lg font-semibold text-blue-700 mb-2">Address</h3>
+                    <h3 className="text-base md:text-lg font-semibold gradient-text mb-2 mt-4">Address</h3>
                     <p className="text-gray-600 leading-relaxed">
-                      NANDKORE PALACE<br />
-                      MANCHHUBHAI ROAD<br />
-                      MALAD EAST<br />
-                      MUMBAI 400097
+                      Nandkore Palace Manchubhai Rd, Malad East, Mumbai - 400097
                     </p>
                   </motion.div>
                   
                   <motion.div variants={fadeIn}>
-                    <h3 className="text-base md:text-lg font-semibold text-blue-700 mb-2">Office Hours</h3>
+                    <h3 className="text-base md:text-lg font-semibold gradient-text mb-2">Office Hours</h3>
                     <p className="text-gray-600 leading-relaxed">
-                      Monday - Friday: 9:00 AM - 5:00 PM<br />
-                      Saturday: 11:00 AM - 4:00 PM<br />
-                      Sunday: Closed
+                      <span className='font-semibold mr-2'>Monday - Friday</span>- 9:00 AM - 5:00 PM<br />
+                      <span className='font-semibold mr-2'>Saturday</span>- 11:00 AM - 4:00 PM<br />
+                      <span className='font-semibold mr-2'>Sunday</span>- Closed
                     </p>
                   </motion.div>
                   
                   <motion.div variants={fadeIn}>
-                    <h3 className="text-base md:text-lg font-semibold text-blue-700 mb-2">Contact Info</h3>
+                    <h3 className="text-base md:text-lg font-semibold gradient-text mb-2">Contact Info</h3>
                     <p className="text-gray-600 leading-relaxed">
                       Phone: +91 9167699919<br />
                       Email: kenilshah059@gmail.com
@@ -326,7 +323,7 @@ export default function Contact() {
                 transition={{ duration: 0.3 }}
               >
                 <motion.h2 
-                  className="text-xl sm:text-2xl font-semibold text-gray-800 mb-4 md:mb-6"
+                  className="text-xl sm:text-2xl font-semibold gradient-text mb-4 md:mb-6"
                   variants={fadeIn}
                 >
                   Send us a Message
@@ -447,7 +444,7 @@ export default function Contact() {
                     <motion.button
                       type="submit"
                       disabled={isSubmitting}
-                      className={`px-6 py-3 bg-gradient-to-r from-green-600 to-blue-700 text-white font-medium rounded-md hover:opacity-90 transition-all focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
+                      className={`px-6 py-3 bg-gradient-to-r from-sky-950 via-sky-900 to-emerald-700 text-white font-medium rounded-md hover:opacity-90 transition-all focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                       transition={{ duration: 0.2 }}
@@ -467,7 +464,7 @@ export default function Contact() {
             viewport={{ once: true }}
           >
             <motion.h2 
-              className="text-xl sm:text-2xl font-semibold text-gray-800 mb-4 md:mb-6"
+              className="text-xl sm:text-2xl font-semibold gradient-text mb-4 md:mb-6"
               variants={fadeIn}
             >
               Find Us
